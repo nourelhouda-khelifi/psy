@@ -14,13 +14,19 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class header extends JPanel {
-	private JLabel headerLabel;
-
+	private JLabel greeting = new JLabel("Hi admin");
+	private JLabel notesHeader = new JLabel("Notes to Review");	
+	static JTextField f = new JTextField("Search for client name");
     public header() {
-        headerLabel = new JLabel("jtm nawara");
-        headerLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        setLayout(new BorderLayout());
-        add(headerLabel, BorderLayout.CENTER);
+    	greeting.setFont(new Font("Arial", Font.BOLD, 24));
+    	
+    	notesHeader.setFont(new Font("Arial", Font.BOLD, 24));
+    	this.setLayout(new FlowLayout( FlowLayout.CENTER, 100, 0));
+    	add(greeting, BorderLayout.NORTH);
+        
+        add(notesHeader, BorderLayout.CENTER);
+        add(f, BorderLayout.EAST);
+
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
     }
 }
