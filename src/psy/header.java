@@ -17,7 +17,7 @@ public class header extends JPanel {
 	private JLabel headerLabel;
 
     public header() {
-        headerLabel = new JLabel("jtm nawara");
+        headerLabel = new JLabel("test");
         headerLabel.setFont(new Font("Arial", Font.BOLD, 24));
         setLayout(new BorderLayout());
         add(headerLabel, BorderLayout.CENTER);
