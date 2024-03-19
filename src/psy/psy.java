@@ -24,6 +24,7 @@ import javax.swing.border.EtchedBorder;
 
 public class psy  extends JFrame{
 	header headerPanel = new header();
+	main mainPanel = new main();
     public psy() {
         setTitle("Main Layout Example");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,6 +32,7 @@ public class psy  extends JFrame{
 
       
         add(headerPanel, BorderLayout.NORTH);
+        add(mainPanel, BorderLayout.CENTER);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
