@@ -25,17 +25,21 @@ import javax.swing.border.EtchedBorder;
 public class psy  extends JFrame{
 	header headerPanel = new header();
 	main mainPanel = new main();
+	left left = new left();
+	
     public psy() {
         setTitle("Main Layout Example");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-      
+
         add(headerPanel, BorderLayout.NORTH);
+        add(left, BorderLayout.WEST);      
         add(mainPanel, BorderLayout.CENTER);
-        pack();
+        
         setLocationRelativeTo(null);
         setVisible(true);
+        pack();
     }
 
     public static void main(String[] args) {

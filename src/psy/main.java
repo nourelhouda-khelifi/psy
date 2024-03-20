@@ -29,7 +29,7 @@ public class main extends JPanel {
     }
 }
 
- class session extends JPanel {
+class session extends JPanel {
 
     JLabel dateLabel = new JLabel();
     JLabel clientLabel = new JLabel();
@@ -41,10 +41,9 @@ public class main extends JPanel {
         dateLabel.setText("From " + date);
         clientLabel.setText("Session with " + client);
 
-        top.setLayout(new FlowLayout(FlowLayout.LEADING));
-        top.add(dateLabel);
-        top.add(Box.createHorizontalGlue()); // Pushes the viewButton to the end
-        top.add(viewButton);
+        top.setLayout(new BorderLayout());
+        top.add(dateLabel, BorderLayout.WEST);
+        top.add(viewButton, BorderLayout.EAST);
         viewButton.setMargin(new Insets(0, 20, 0, 20));
         top.setBackground(Color.white);
 
@@ -57,5 +56,4 @@ public class main extends JPanel {
 
     }
 }
-
 
