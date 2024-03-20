@@ -1,36 +1,61 @@
 package psy;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 public class main extends JPanel {
-	private JLabel greeting = new JLabel("Hi admin");
-	private JLabel notesHeader = new JLabel("Notes to Review");	
-	static JTextField f = new JTextField("Search for client name");
+	
+	session s= new session("2018-25-01","client");
+	session s2= new session("2018-25-01","client");
     public main() {
-    	greeting.setFont(new Font("Arial", Font.BOLD, 24));
-    	
-    	notesHeader.setFont(new Font("Arial", Font.BOLD, 24));
-    	this.setLayout(new FlowLayout( FlowLayout.CENTER, 100, 0));
-    	add(greeting, BorderLayout.NORTH);
-        
-        add(notesHeader, BorderLayout.CENTER);
-        add(f, BorderLayout.EAST);
-
-        setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+   
+		this.setLayout(new GridLayout( 0,1,10,10));
+		add(s);
+		add(s2);
     }
 }
 
+ class session extends JPanel {
 
+    JLabel dateLabel = new JLabel();
+    JLabel clientLabel = new JLabel();
+    JButton viewButton = new JButton("view");
+    ImageIcon icon = new ImageIcon("eye");
+    JPanel top = new JPanel();
+
+    public session(String date, String client) {
+        dateLabel.setText("From " + date);
+        clientLabel.setText("Session with " + client);
+
+        top.setLayout(new FlowLayout(FlowLayout.LEADING));
+        top.add(dateLabel);
+        top.add(Box.createHorizontalGlue()); // Pushes the viewButton to the end
+        top.add(viewButton);
+        viewButton.setMargin(new Insets(0, 20, 0, 20));
+        top.setBackground(Color.white);
+
+        this.setLayout(new BorderLayout());
+        this.setBorder(new EmptyBorder(10, 10, 10, 10));
+        this.setBackground(Color.WHITE);
+
+        this.add(top, BorderLayout.NORTH);
+        this.add(clientLabel, BorderLayout.CENTER);
+
+    }
+}
 
 

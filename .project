@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>eye.png</name>
+			<type>1</type>
+			<location>C:/Users/bouas/OneDrive/Desktop/psycho projet java/psy/src/eye.png</location>
+		</link>
+		<link>
+			<name>src/eye.png</name>
+			<type>1</type>
+			<location>C:/Users/bouas/OneDrive/Desktop/psycho projet java/psy/src/eye.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>
